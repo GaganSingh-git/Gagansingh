@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechHub - Team Members</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        /* Navigation */
+        .navbar {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .navbar-brand {
+            color: white !important;
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+        .nav-link {
+            color: white !important;
+            font-weight: 500;
+            margin-left: 20px;
+        }
+        /* Header Section */
+        .team-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .team-header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        /* Team Section */
+        .team-section {
+            padding: 60px 20px;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 40px;
+            color: #333;
+        }
+        .team-member {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+        .team-member-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+        }
+        .team-member-info {
+            padding: 25px;
+        }
+        .team-member-info h5 {
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        .team-member-info p {
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .social-links a {
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #667eea;
+            color: white;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+        .social-links a:hover {
+            background: #764ba2;
+            transform: scale(1.1);
+        }
+        /* Table Container */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .table-wrapper {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .table {
+            margin: 0;
+        }
+        .table thead {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .table thead th {
+            border: none;
+            font-weight: 600;
+            padding: 15px;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+        }
+        .table tbody tr {
+            border-bottom: 1px solid #f0f0f0;
+            transition: background-color 0.3s ease;
+        }
+        .table tbody tr:hover {
+            background-color: #f8f9fa;
+        }
+        .table tbody td {
+            padding: 15px;
+            vertical-align: middle;
+        }
+        .badge-success {
+            background-color: #28a745;
+        }
+        .badge-pending {
+            background-color: #ffc107;
+            color: #000;
+        }
+        .badge-danger {
+            background-color: #dc3545;
+        }
+        footer {
+            background: #333;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            margin-top: 60px;
+        }
+        footer a {
+            color: #ffc107;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index_new.html"><i class="fas fa-rocket"></i> TechHub</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index_new.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="hea.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Team</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <div class="team-header">
+      <h1>Our Team</h1>
+      <p>Meet the talented professionals behind TechHub</p>
+    </div>
+
+    <!-- Team Section -->
+    <section class="team-section">
+      <div class="container">
+        <h2 class="section-title">Executive Team</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="team-member">
+              <div class="team-member-image">
+                <i class="fas fa-user-tie"></i>
+              </div>
+              <div class="team-member-info">
+                <h5>Sarah Johnson</h5>
+                <p>CEO & Founder</p>
+                <small>Leading innovation in tech solutions</small>
+                <div class="social-links" style="margin-top: 10px;">
+                  <a href="#"><i class="fab fa-linkedin"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="team-member">
+              <div class="team-member-image">
+                <i class="fas fa-user-tie"></i>
+              </div>
+              <div class="team-member-info">
+                <h5>Mark Wilson</h5>
+                <p>CTO</p>
+                <small>Technology strategy & innovation</small>
+                <div class="social-links" style="margin-top: 10px;">
+                  <a href="#"><i class="fab fa-linkedin"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="team-member">
+              <div class="team-member-image">
+                <i class="fas fa-user-tie"></i>
+              </div>
+              <div class="team-member-info">
+                <h5>Emily Davis</h5>
+                <p>COO</p>
+                <small>Operations & business development</small>
+                <div class="social-links" style="margin-top: 10px;">
+                  <a href="#"><i class="fab fa-linkedin"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Data Table -->
+    <section class="team-section" style="background: white;">
+      <div class="container">
+        <h2 class="section-title">Employee Directory</h2>
+        <div class="table-wrapper">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Position</th>
+                <th scope="col">Department</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">001</th>
+                <td>Mark Otto</td>
+                <td>Senior Developer</td>
+                <td>Engineering</td>
+                <td><span class="badge badge-success">Active</span></td>
+              </tr>
+              <tr>
+                <th scope="row">002</th>
+                <td>Jacob Thornton</td>
+                <td>Product Manager</td>
+                <td>Product</td>
+                <td><span class="badge badge-success">Active</span></td>
+              </tr>
+              <tr>
+                <th scope="row">003</th>
+                <td>John Doe</td>
+                <td>UX Designer</td>
+                <td>Design</td>
+                <td><span class="badge badge-pending">On Leave</span></td>
+              </tr>
+              <tr>
+                <th scope="row">004</th>
+                <td>Sarah Wilson</td>
+                <td>Data Analyst</td>
+                <td>Analytics</td>
+                <td><span class="badge badge-success">Active</span></td>
+              </tr>
+              <tr>
+                <th scope="row">005</th>
+                <td>Emily Davis</td>
+                <td>Marketing Manager</td>
+                <td>Marketing</td>
+                <td><span class="badge badge-danger">Inactive</span></td>
+              </tr>
+              <tr>
+                <th scope="row">006</th>
+                <td>Alex Thompson</td>
+                <td>DevOps Engineer</td>
+                <td>Infrastructure</td>
+                <td><span class="badge badge-success">Active</span></td>
+              </tr>
+              <tr>
+                <th scope="row">007</th>
+                <td>Lisa Anderson</td>
+                <td>QA Specialist</td>
+                <td>Quality Assurance</td>
+                <td><span class="badge badge-success">Active</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>&copy; 2026 TechHub. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
